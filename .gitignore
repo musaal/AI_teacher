@@ -1,0 +1,25 @@
+#ignore this in github
+
+# environment variables
+.env
+
+#Cache folders
+__pycache__/
+
+# 
+.venv/
+
+venv/
+
+media/
+
+vscode/
+
+my_3b1b_model/
+
+tests/
+
+
+
+
+
