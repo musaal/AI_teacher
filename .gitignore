@@ -20,6 +20,10 @@ my_3b1b_model/
 tests/
 
 
+test_venv
+
+.test_env
+
 
 
 
