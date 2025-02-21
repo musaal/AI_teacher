@@ -144,7 +144,7 @@ opentelemetry-exporter-otlp-proto-http
 opentelemetry-instrumentation
 opentelemetry-instrumentation-asgi
 opentelemetry-instrumentation-fastapi
-opentelemetry-proto
+#opentelemetry-proto
 opentelemetry-sdk
 opentelemetry-semantic-conventions
 opentelemetry-util-http
