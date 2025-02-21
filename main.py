@@ -3,7 +3,7 @@ from crewai import Crew, Process
 from langchain_community.llms import OpenAI , Ollama
 # from langchain.llms import Ollama 
 # from langchain_community.llms import Ollama 
-
+from crewai import LLM
 from agents import teachAgents
 from tasks import techerTasks
 from tools.file_io import save_and_execute
@@ -25,11 +25,23 @@ static_route = os.getenv('STATIC_ROUTE', '/static')
 static_name = os.getenv('STATIC_NAME', 'static_files')
 
 # # Initialize the language model
-llm = Ollama(
-    model="deepseek-r1:1.5b ",
-    base_url="http://localhost:11434"
-)
+#llm = Ollama(
+#    model="deepseek-r1:1.5b ",
+#    base_url="http://localhost:11434"
+#)
+OPENAI_API_KEY="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"
 # # gpt-3.5-turbo
+
+llm = LLM(
+    model="openai/gpt-4", # call model by provider/model_name
+    temperature=0.8,
+    max_tokens=150,
+    top_p=0.9,
+    frequency_penalty=0.1,
+    presence_penalty=0.1,
+    stop=["END"],
+    seed=42
+)
 
 # Path to the PDF file
 pdf_path = "C:/Users/NTC/Desktop/musa/statistical mechanics _1/Ch1.pdf"
@@ -76,7 +88,7 @@ class TeachCrew:
             crew = Crew(
                 agents=[Teach_agent_1, Teach_agent_2],
                 tasks=[Teach_task_1, Teach_task_2],
-                #process=Process.hierarchical,
+                process=Process.hierarchical,
                 manager_llm=llm,
                 verbose=True
             )
