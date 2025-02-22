@@ -33,21 +33,9 @@ api_key = os.getenv('OPENAI_API_KEY')
 #)
 OPENAI_API_KEY="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"
 # # gpt-3.5-turbo
-<<<<<<< HEAD
-# llm = LLM(
-#     model="openai/gpt-3.5-turbo-instruct-0914", # call model by provider/model_name
-#     temperature=0.8,
-#     max_tokens=150,
-#     top_p=0.9,
-#     frequency_penalty=0.1,
-#     presence_penalty=0.1,
-#     stop=["END"],
-#     seed=42
-# )
-=======
 
 llm = LLM(
-    model="openai/gpt-4", # call model by provider/model_name
+    model="openai/gpt-3.5-turbo-instruct-0914", # call model by provider/model_name
     temperature=0.8,
     max_tokens=150,
     top_p=0.9,
@@ -57,7 +45,6 @@ llm = LLM(
     seed=42
 )
 
->>>>>>> db53a42aaca69ce2a4a99ffc37d403391bd9bdcb
 # Path to the PDF file
 pdf_path = "C:/Users/NTC/Desktop/musa/statistical mechanics _1/Ch1.pdf"
 
