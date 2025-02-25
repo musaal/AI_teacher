@@ -1,7 +1,7 @@
 import os
 from crewai import Crew, Process
 from langchain_community.llms import OpenAI , Ollama
-# from langchain.llms import Ollama 
+#from langchain.llms import Ollama 
 # from langchain_community.llms import Ollama 
 from crewai import LLM
 from agents import teachAgents
@@ -27,10 +27,10 @@ static_name = os.getenv('STATIC_NAME', 'static_files')
 api_key = os.getenv('OPENAI_API_KEY')
 
 # # Initialize the language model
-#llm = Ollama(
+# llm = Ollama(
 #    model="deepseek-r1:1.5b ",
 #    base_url="http://localhost:11434"
-#)
+# )
 OPENAI_API_KEY="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"
 # # gpt-3.5-turbo
 
@@ -90,7 +90,7 @@ class TeachCrew:
             crew = Crew(
                 agents=[Teach_agent_1, Teach_agent_2],
                 tasks=[Teach_task_1, Teach_task_2],
-                process=Process.hierarchical,
+                #process=Process.hierarchical,
                 manager_llm=llm,
                 verbose=True
             )
