@@ -317,7 +317,7 @@ class SceneGeneratorTool:
             output_dir (str, optional): Directory where Manim scripts will be saved.
                                         Defaults to a "manim_scripts" folder in the current directory.
         """
-        self.api_url = "https://7c22-34-126-99-10.ngrok-free.app" #api_url  # Colab API URL for your fine-tuned model
+        self.api_url = "https://735d-34-143-147-149.ngrok-free.app" #api_url  # Colab API URL for your fine-tuned model
 
         # if output_dir is None:
         #     output_dir = os.path.join(os.getcwd(), "manim_scripts")
